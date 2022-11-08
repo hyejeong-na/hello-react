@@ -25,7 +25,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.SECRET_KEY }}
           aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
-          aws-region: us-west-1
+          aws-region: ap-northeast-2
 
       - name: Deploy to S3 bucket
-        run: aws s3 sync ./dist/ s3://reactnhj-deploy --delete
+        run: aws s3 sync ./ s3://reactnhj-deploy --delete
